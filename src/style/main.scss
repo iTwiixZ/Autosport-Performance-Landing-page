@@ -1,0 +1,121 @@
+.main_container {
+  background-image: url(../assets/iTwiixZ_Golf_8_GTI_CLUBSPORT_45_with_realistic_shader_in_japan__8edae845-bd72-47ed-9393-af6fb591b318.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+// Put content in the bottom left of the screen
+.content {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  max-height: calc(100% - 20px);
+  overflow: auto; /* pour activer le défilement si le contenu dépasse la hauteur max */
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.middle_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  color: #fff;
+  padding: 15px;
+}
+.description {
+  width: 800px;
+}
+.img_container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 600px;
+  height: 600px;
+
+  img {
+    width: 50%;
+    height: 50%;
+    padding: 10px;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+    transition: filter 300ms ease-in !important;
+    &:hover {
+      filter: blur(2px) !important;
+    }
+  }
+}
+
+.bottom_content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.buy_btn {
+  background-color: #f5f5f5 !important;
+  color: #000 !important;
+  border: none !important;
+  padding: 10px 20px !important;
+  border-radius: 5px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  &:hover {
+    color: red !important;
+  }
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  .description {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    width: 350px;
+    text-align: center;
+    font-size: 12px !important;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .content {
+    bottom: 0px;
+  }
+  .main_container {
+    min-height: 100vh;
+  }
+  .img_container {
+    width: 350px;
+    height: 250px;
+    img {
+      width: 50%;
+      height: 50%;
+    }
+  }
+
+  .middle_content {
+    flex-direction: column;
+  }
+
+  .bottom_content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cars {
+    font-size: 24px !important;
+  }
+  .buy_btn {
+    font-size: 14px !important;
+    margin-top: 5px !important;
+  }
+  .bottom_content {
+    flex-direction: row;
+    align-items: center;
+  }
+  .main_container {
+    height: 100%;
+  }
+}
